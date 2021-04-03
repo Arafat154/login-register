@@ -75,10 +75,17 @@ body{
    margin       : 5rem 0;
    font-size    : 1.5rem;
    font-family  : 'Lexend', sans-serif;
+   padding-right: 10%;
 }
-.container .card .card-body .card-body-lower .form-group div{
+.container .card .card-body .card-body-lower .form-group .relative{
    position: relative;
-   display : block;
+}
+.container .card .card-body .card-body-lower .form-group .icon{
+   position: absolute;
+   left: 92%;
+   top: 0.3rem;
+   background: none;
+   font-size: 2.5rem;
 }
 .container .card .card-body .card-body-lower .form-group label{
    font-family: 'Merriweather', serif;
