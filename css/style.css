@@ -1,18 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500&family=Merriweather:ital,wght@0,400;1,300&display=swap');
 *{
-   margin: 0;
-   padding: 0;
+   margin    : 0;
+   padding   : 0;
    box-sizing: border-box;
 }
-body{
-   width: 100%;
-   height: 100vh;
-   background: url(../img/bg-main.jpg);
-   background-size: cover;
-   background-repeat: no-repeat;
+html{
+   font-size: 62.5%;
 }
-.card{
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%,-50%);
+body{
+   width            : 100%;
+   height           : 100vh;
+   background       : url(../img/bg-main.jpg);
+   background-size  : cover;
+   background-repeat: no-repeat;
+   overflow         : hidden;
+}
+.container .card{
+   background             : rgba(255, 255, 255, 0.25);
+   box-shadow             : 0 0.8rem 3.2rem 0 rgba(31, 38, 135, 0.37);
+   backdrop-filter        : blur(0.7rem);
+   -webkit-backdrop-filter: blur(0.7rem);
+   border-radius          : 1rem;
+   border                 : 0.1rem solid rgba(255, 255, 255, 0.18);
+   position               : absolute;
+   top                    : 50%;
+   left                   : 50%;
+   transform              : translate(-50%,-50%);
+   padding-top            : 1rem;
+   padding-bottom         : 1rem;
+}
+.container .card .card-body .card-body-upper{
+   width : 75%;
+   margin: 0 auto;
+}
+.container .card .card-body .card-body-upper .nav{
+   border-bottom: none;
+}
+.container .card .card-body .card-body-upper .nav .nav-item{               
+   width        : 50%;
+   text-align   : center;
+   border-radius: 1rem;
+   color        : #fff;
+   border       : none;
+   padding      : 1rem 0.6rem;
+   font-family  : 'Lexend', sans-serif;
+   font-weight  : 600;
+   font-size    : 1.6rem;
+}
+.container .card .card-body .card-body-upper .nav .nav-item.active{
+   background: #ff7675;
+   box-shadow: 0 0.5rem 1.2rem rgba(0,0,0,0.5);
+}
+.container .card .card-body .card-body-lower .form-group{
+   color: #fff;
+}
+.container .card .card-body .card-body-lower .form-group .form-control{
+   background   : transparent;
+   border       : none;
+   border-bottom: 0.2rem solid #fff;
+   outline      : none;
+   padding      : 2rem 0;
+   color        : #fff;
+   margin       : 5rem 0;
+   font-size    : 2rem;
+}
+.container .card .card-body .card-body-lower .form-group div{
+   position: relative;
+   display : block;
+}
+.container .card .card-body .card-body-lower .form-group label{
+   font-family: 'Merriweather', serif;
+   font-weight: 500;
+   position   : absolute;
+   top        : 0.5rem;
+   left       : 0;
+   transition : 0.5s;
+   font-size  : 2rem;
+}
+.container .card .card-body .card-body-lower .form-group .form-control:valid ~ label,
+.container .card .card-body .card-body-lower .form-group .form-control:focus ~ label{
+   top      : -1.5rem;
+   left     : 0;
+   font-size: 1.4rem;
+}
+.container .card .card-body .card-body-lower .form-group span{
+   width     : 0;
+   height    : 0.2rem;
+   position  : absolute;
+   bottom    : 0;
+   left      : 0;
+   background: #ff7675;
+   transition: 0.5s;
+}
+.container .card .card-body .card-body-lower .form-group .form-control:valid ~ span,
+.container .card .card-body .card-body-lower .form-group .form-control:focus ~ span{
+   width: 100%;
+}
+input[type="submit"]{
+   width        : 60%;
+   padding      : 1rem 0.4rem;
+   display      : block;
+   margin       : 0 auto;
+   background   : blueviolet;
+   outline      : none;
+   border       : none;
+   font-family  : 'Lexend', sans-serif;
+   font-weight  : 600;
+   color        : #fff;
+   box-shadow   : 0 0.5rem 1.2rem rgba(0,0,0,0.5);
+   border-radius: 1rem;
+   font-size    : 1.6rem;
 }
