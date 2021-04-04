@@ -57,10 +57,31 @@ body{
    font-family  : 'Lexend', sans-serif;
    font-weight  : 600;
    font-size    : 1.6rem;
+   overflow     : hidden;
 }
-.container .card .card-body .card-body-upper .nav .nav-item.active{
-   background: #ff7675;
-   box-shadow: 0 0.5rem 1.2rem rgba(0,0,0,0.5);
+.container .card .card-body .card-body-upper .nav .active{
+   background             : rgba(255, 118, 117, 0.50);
+   box-shadow             : 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+   backdrop-filter        : blur(5.5px);
+   -webkit-backdrop-filter: blur(5.5px);
+   border-radius          : 10px;
+   border                 : 1px solid rgba(255, 255, 255, 0.18);
+   box-shadow             : 0 0.5rem 1.2rem rgba(0,0,0,0.5);
+   position               : relative;
+}
+.container .card .card-body .card-body-upper .nav .active::after {
+   content   : '';
+   position  : absolute;
+   width     : 100%;
+   height    : 2rem;
+   background: rgba(256, 256, 256, 0.5);
+   top       : 0;
+   left      : 0;
+   transform : translateX(100%) rotate(55deg);
+   transition: 1.3s;
+}
+.container .card .card-body .card-body-upper .nav .active:active::after {
+   transform: translateX(-100%) rotate(55deg);
 }
 .container .card .card-body .card-body-lower .form-group{
    color: #fff;
